@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hope Odo | Web3 Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --link-color: #0077ff;
+    }
+    [data-theme="dark"] {
+      --bg-color: #0d1117;
+      --text-color: #e6edf3;
+      --link-color: #58a6ff;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { font-size: 2rem; margin-bottom: 0.3rem; }
+    h2 { margin-top: 2rem; border-bottom: 1px solid var(--link-color); display: inline-block; padding-bottom: 0.3rem; }
+    a { color: var(--link-color); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .toggle-btn { position: absolute; top: 1rem; right: 1rem; background: none; border: 1px solid var(--link-color); border-radius: 8px; padding: 0.4rem 0.8rem; cursor: pointer; color: var(--link-color); }
+    ul { line-height: 1.8; }
+    .links a { display: block; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" id="theme-toggle">🌙 Dark</button>
+
+  <header>
+    <h1>Hope Odo</h1>
+    <p>Content Creator & Web3 Community Builder</p>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>A fresh, young and highly motivated person. I help create and curate content intended to reach audiences for projects, leveraging my understanding of social media to help manage and grow communities. I am motivated by personal growth, always eager to learn, adapt, and take on new challenges. Currently studying vibe coding.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Content Creation</li>
+      <li>Social Media Management</li>
+      <li>Business Development</li>
+      <li>Community Management</li>
+      <li>Discord Growth</li>
+    </ul>
+  </section>
+
+  <section id="work">
+    <h2>Notable Work</h2>
+    <ul>
+      <li><a href="https://x.com/KennOnTheRun/status/1988185442240671818" target="_blank">Post 1</a></li>
+      <li><a href="https://x.com/KennOnTheRun/status/1973147357186527411" target="_blank">Post 2</a></li>
+      <li><a href="https://x.com/KennOnTheRun/status/1966020138135638179" target="_blank">Post 3</a></li>
+      <li><a href="https://x.com/KennOnTheRun/status/1908458588504211582" target="_blank">Post 4</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="links">
+      <a href="https://x.com/KennOnTheRun" target="_blank">Twitter: @KennOnTheRun</a>
+      <a href="https://t.me/alsoKennEth" target="_blank">Telegram: @alsoKennEth</a>
+      <a href="mailto:drealhope66@gmail.com">Email: drealhope66@gmail.com</a>
+      <a href="https://github.com/huesofhope/My-portfolio-" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      if (currentTheme === 'dark') {
+        document.body.removeAttribute('data-theme');
+        toggleBtn.textContent = '🌙 Dark';
+      } else {
+        document.body.setAttribute('data-theme', 'dark');
+        toggleBtn.textContent = '☀️ Light';
+      }
+    });
+  </script>
+</body>
+</html>
